@@ -1,15 +1,13 @@
-import winston from "winston";
+import winston from 'winston';
 
-const logger = winston.createLogger({
-    level: "info",
-    // handleExceptions: true,
-    transports: [
-        new winston.transports.Console({}),
-        new winston.transports.File({
-            handleExceptions: true,
-            filename: "exception.log"
-        })
-    ]
-});
+winston.createLogger({
+  level: "info",
+  transports: [
+    new winston.transports.File({
+      handleExceptions: true,
+      filename: "exceptions.log"
+    })
+  ]
+})
 
-hello();
+hello()

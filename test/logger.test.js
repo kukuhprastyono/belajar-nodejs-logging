@@ -1,13 +1,10 @@
-
-import winston from "winston";
+import winston from "winston"
 
 test("create new logger", () => {
+  const logger = winston.createLogger({});
 
-    const logger = winston.createLogger({});
-
-    logger.log({
-        level: "info",
-        message: "Hello Logging"
-    });
-
-});
+  // logger.log({
+  //   level: "info",
+  //   message: "Hello logger"
+  // })
+})
